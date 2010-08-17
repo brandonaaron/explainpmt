@@ -5,9 +5,8 @@
   <% end %>
 
   <% collection_content(iterations) do %>
-    <%= hidden_field_tag :move_to %>
     Move Selected Story Cards to:
-    <%= select_tag selected_id, iteration_select_list_for(iterations, default), :onchange => "$('move_to').value = this.value" %>
+    <%= select_tag "move_to", iteration_select_list_for(iterations, default) %>
     <%= submit_tag "Go" %>
   <% end %>
 </div>
